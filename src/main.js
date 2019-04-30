@@ -3,13 +3,13 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import './assets/styles/reset.css'
+import 'styles/reset.css'
 // 1像素边框方案
-import './assets/styles/border.css'
+import 'styles/border.css'
 // click事件导致300ms
 import fastClick from 'fastclick'
 // 引入iconfont
-import './assets/styles/iconfont.css'
+import 'styles/iconfont.css'
 
 fastClick.attach(document.body)
 
