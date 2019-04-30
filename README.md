@@ -1,6 +1,13 @@
 # ethan_travel
 
 > msk的vue应用
+## 一、项目初始化
+### 1.初始化项目
+vue init webpack  Ethan_Travel
+
+### 2.git管理
+1. github创建项目
+2. 将本地项目关联
 
 ## 二、搭建界面
 ### 1.安装stylus
