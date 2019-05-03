@@ -10,8 +10,14 @@ import 'styles/border.css'
 import fastClick from 'fastclick'
 // 引入iconfont
 import 'styles/iconfont.css'
+// 引入swiper
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+// 引入 swiper要求的css
+import 'swiper/dist/css/swiper.css'
 
 fastClick.attach(document.body)
+//USE swiper//在全局中配置
+Vue.use(VueAwesomeSwiper,)
 
 Vue.config.productionTip = false
 

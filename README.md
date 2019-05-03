@@ -29,3 +29,9 @@ fastClick.attach(document.body)
 2. 导入本地项目（在本地@/assets/styles/iconfont下放入：[.eot , .svg , .ttf , .woff]四个文件，在本地@/assets/styles放入：[iconfont.css]）
 3. 修改iconfont.css引入的路径
 4. 在html中使用 <span class="iconfont">&#xe624;</span>【&#xe624;是从官网中复制代码的来】
+> 创建别名：在webpack.base.conf.js中 添加'styles': resolve('src/assets/styles')
+### 3. 创建轮播图，使用swiper
+#### 1. git的新分支：
+1. 创建并切换新分支：git checkout -b <分支名>
+2. 
+#### 2. 引入swiper
