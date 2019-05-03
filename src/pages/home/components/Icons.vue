@@ -22,52 +22,10 @@ export default {
     name: 'icons',
     data (){
         return{
-            iconList:[{
-                id:'001',
-                imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-                desc:'热门景点'
-            },
-            {
-                id:'002',
-                imgUrl:'http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png',
-                desc:'一日游'
-            },
-            {
-                id:'003',
-                imgUrl:'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/5ea666792b98f34c86faea912b5fbcf9.png',
-                desc:'玩转五一'
-            },
-            {
-                id:'004',
-                imgUrl:'http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png',
-                desc:'一日游'
-            },
-            {
-                id:'005',
-                imgUrl:'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/5ea666792b98f34c86faea912b5fbcf9.png',
-                desc:'玩转五一'
-            },
-            {
-                id:'006',
-                imgUrl:'http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png',
-                desc:'一日游'
-            },
-            {
-                id:'007',
-                imgUrl:'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/5ea666792b98f34c86faea912b5fbcf9.png',
-                desc:'玩转五一'
-            },
-            {
-                id:'008',
-                imgUrl:'http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png',
-                desc:'一日游'
-            },
-            {
-                id:'009',
-                imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png',
-                desc:'动植物园'
-            }]
         }
+    },
+    props:{
+        iconList: Array
     },
     computed:{
         pages (){

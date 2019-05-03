@@ -35,3 +35,8 @@ fastClick.attach(document.body)
 1. 创建并切换新分支：git checkout -b <分支名>
 2. 
 #### 2. 引入swiper
+
+### 4. 添加推荐模块。
+### 5. 添加ajax(axios)
+1. 安装npm install axios --save
+2. 引用

@@ -19,48 +19,11 @@ export default {
     name:'HomeRecommend',
     data (){
         return{
-            recommendList:[{
-                id: '0001',
-                imgUrl: 'http://img1.qunarzz.com/sight/p0/1904/65/65a949083122447da3.img.jpg_200x200_c4b2f699.jpg',
-                title:'华谊兄弟电影世界',
-                desc:'2480条评论'
-            },{
-                id:'0002',
-                imgUrl: 'http://img1.qunarzz.com/sight/p0/1607/7c/7cda8b6782dabd80b4.img.jpg_200x200_2039e660.jpg',
-                title: '上海迪士尼乐园',
-                desc: '全球最大的迪士尼乐园'
-            },{
-                id: '0003',
-                imgUrl: 'http://img1.qunarzz.com/sight/p0/1904/65/65a949083122447da3.img.jpg_200x200_c4b2f699.jpg',
-                title:'华谊兄弟电影世界',
-                desc:'2480条评论'
-            },{
-                id:'0004',
-                imgUrl: 'http://img1.qunarzz.com/sight/p0/1607/7c/7cda8b6782dabd80b4.img.jpg_200x200_2039e660.jpg',
-                title: '上海迪士尼乐园',
-                desc: '全球最大的迪士尼乐园'
-            },{
-                id: '0005',
-                imgUrl: 'http://img1.qunarzz.com/sight/p0/1904/65/65a949083122447da3.img.jpg_200x200_c4b2f699.jpg',
-                title:'华谊兄弟电影世界',
-                desc:'2480条评论'
-            },{
-                id:'0006',
-                imgUrl: 'http://img1.qunarzz.com/sight/p0/1607/7c/7cda8b6782dabd80b4.img.jpg_200x200_2039e660.jpg',
-                title: '上海迪士尼乐园',
-                desc: '全球最大的迪士尼乐园'
-            },{
-                id: '0007',
-                imgUrl: 'http://img1.qunarzz.com/sight/p0/1904/65/65a949083122447da3.img.jpg_200x200_c4b2f699.jpg',
-                title:'华谊兄弟电影世界',
-                desc:'2480条评论'
-            },{
-                id:'0008',
-                imgUrl: 'http://img1.qunarzz.com/sight/p0/1607/7c/7cda8b6782dabd80b4.img.jpg_200x200_2039e660.jpg',
-                title: '上海迪士尼乐园',
-                desc: '全球最大的迪士尼乐园'
-            }]
+
         }
+    },
+    props:{
+        recommendList: Array
     }
 
 }
