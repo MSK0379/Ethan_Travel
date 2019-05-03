@@ -89,6 +89,7 @@ export default {
 @import '~styles/varibles.styl'; 
 @import '~styles/mixins.styl';
 .icons
+    margin-top .1rem
     overflow hidden
     width 100%
     height 0
