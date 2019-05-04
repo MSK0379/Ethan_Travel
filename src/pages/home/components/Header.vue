@@ -7,10 +7,12 @@
             <span class="iconfont">&#xe632;</span>
             输入游玩信息
         </div>
-       <div class="header-right">
-           {{this.city}}
-            <span class="iconfont">&#xe612;</span>
-        </div>
+        <router-link to="/city">
+            <div class="header-right">
+            {{this.city}}
+                <span class="iconfont arrow-icon">&#xe612;</span>
+            </div>
+        </router-link>   
     </div>
 </template>
 
@@ -50,9 +52,11 @@ export default {
         color #ccc
     .header-right
         width 1.24rem
-        float right;
+        float right
+        color #ffffff
         text-align center
-
-
+        .arrow-icon
+            margin-left -.04rem
+            font-size .3rem
 </style>
 
