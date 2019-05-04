@@ -19,7 +19,7 @@ fastClick.attach(document.body)
 1. github创建项目
 2. 将本地项目关联
 
-## 二、搭建界面
+## 二、搭建index界面
 ### 1.安装stylus
  > npm install stylus --save
  > npm install stylue-loader --save
@@ -40,3 +40,8 @@ fastClick.attach(document.body)
 ### 5. 添加ajax(axios)
 1. 安装npm install axios --save
 2. 引用
+## 三、搭建city界面
+### 1. better-scroll
+```
+    npm install better-scroll --save
+```
