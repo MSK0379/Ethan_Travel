@@ -18,7 +18,11 @@
                     </div>
                 </div>
             </div>
-            <div class="area" v-for="(item,key)  of cities">
+            <div 
+                class="area" 
+                v-for="(item,key)  of cities" :key="key"
+                :ref="key"
+            >
                 <div class="title  border-topbottom">{{key}}</div>
                 <div class="item-list" v-for="innerItem of item" :key="innerItem.key">
                     <div class="item border-bottom">{{innerItem.name}}</div>
@@ -36,10 +40,21 @@ export default {
     name:'CityList',
     props:{
         cities:Object,
-        hotCities: Array 
+        hotCities: Array,
+        letter: String
     },
     mounted() {
         this.scroll = new Bscroll(this.$refs.wrapper);
+    },
+    watch: {
+        letter() {
+            if (this.letter) {
+                // 找到对应元素
+                const element = this.$refs[this.letter][0];
+                //  滑动至对应位置
+                this.scroll.scrollToElement(element)
+            }
+        }
     }
 
 }

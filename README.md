@@ -45,3 +45,23 @@ fastClick.attach(document.body)
 ```
     npm install better-scroll --save
 ```
+### 2. 关联兄弟组件实现点击右侧字母实现城市跳转对应位置
+> 将子组件（Alphabet）传递到父组件（city）再转发到list组件中
+#### 1. 实现点击字母表，跳转到相应位置
+1. 子组件（Alphabet）通过$emit传递事件及参数给父组件（City）;
+2. 父组件（City）接收参数及事件，传递给子组件（List）
+3. 子组件（list）接收参数，添加监听事件，监听letter变化
+```
+watch: {
+        letter() {
+            if (this.letter) {
+                // 找到对应元素
+                const element = this.$refs[this.letter][0];
+                //  滑动至对应位置
+                this.scroll.scrollToElement(element)
+            }
+        }
+    }
+```
+#### 2. 实现字母表滑动，切换列表
+详见：alphabet组件
