@@ -17,6 +17,8 @@ import HomeRecommend from './components/Recommend'
 import HomeWeekend from './components/Weekend'
 //引用axios
 import axios from 'axios'
+// 使用keep-alive
+import { mapState } from 'vuex'
 export default {
     name: 'Home',
     components:{
@@ -28,15 +30,19 @@ export default {
     },
     data(){
         return{
+            lastCity : '',
             swiperList: [],
             iconList: [],
             recommendList: [],
             weekendList: []
         }
     },
+    computed:{
+        ...mapState(['city'])
+    },
     methods: {
         getHomeInfo() {
-            axios.get('/api/index.json')
+            axios.get('/api/index.json?city=' + this.city)
             .then(this.getHomeInfoSucc)
         },
         getHomeInfoSucc(res){
@@ -50,10 +56,19 @@ export default {
             }
         }
     },
+    // 页面首次加载时
     mounted (){
+        this.lastCity = this.city;
         this.getHomeInfo()
+    },
+    // 使用周期函数时多出来的周期函数
+    activated () {
+        // 重新回到页面上时，若改变了当前城市，则重新发送请求
+        if (this.lastCity !== this.city ) {
+            this.lastCity = this.city;
+            this.getHomeInfo();
+        }
     }
-
 }
 </script>
 
