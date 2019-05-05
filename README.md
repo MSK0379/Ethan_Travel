@@ -63,5 +63,17 @@ watch: {
         }
     }
 ```
-#### 2. 实现字母表滑动，切换列表
+#### 2. 实现字母表滑动，切换列表（）
 详见：alphabet组件
+#### 3. 实现地址搜索功能（city-search-logic分支）
+详见search.vue
+## 四、使用vuex实现数据共享（city-vuex分支）
+> 没有公用组件，使用vuex（数据框架）
+安装：npm install vuex --save
+#### 1. 新建store
+#### 2. 在main.js中引用
+#### 3. 在组件中使用
+通过this.$store 对象进行操作
+#### 4. 编程式的导航
+ this.$router.push('/');
+#### 5. localStorage

@@ -5,7 +5,7 @@
                 <div class="title border-topbottom">当前城市</div>
                 <div class="button-list">
                     <div class="button-wrapper">
-                        <div class="button">北京</div>
+                        <div class="button">{{this.currentCity}}</div>
                     </div>
                 </div>
             </div>
@@ -13,7 +13,9 @@
                 <div class="title border-topbottom">热门城市</div>
                 <div class="button-list">
                     <div class="button-wrapper" 
-                    v-for="item of hotCities" :key="item.id">
+                        v-for="item of hotCities" :key="item.id"
+                        @click="handleCityClick(item.name)"
+                    >
                         <div class="button">{{item.name}}</div>
                     </div>
                 </div>
@@ -24,7 +26,10 @@
                 :ref="key"
             >
                 <div class="title  border-topbottom">{{key}}</div>
-                <div class="item-list" v-for="innerItem of item" :key="innerItem.key">
+                <div class="item-list"
+                    v-for="innerItem of item" :key="innerItem.key"
+                    @click="handleCityClick(innerItem.name)"
+                >
                     <div class="item border-bottom">{{innerItem.name}}</div>
                 </div>
             </div>
@@ -35,13 +40,29 @@
 
 <script>
 import Bscroll from 'better-scroll'
-
+import { mapState , mapMutations} from 'vuex'
 export default {
     name:'CityList',
     props:{
         cities:Object,
         hotCities: Array,
         letter: String
+    },
+    computed: {
+        ...mapState({
+            currentCity: 'city'
+        })
+    },
+    methods:{
+        handleCityClick(city){
+            // 调用action:派发changeCity方法传递参数为city
+            // this.$store.dispatch('changeCity',city);
+            // 由于为简单的同步操作不需要actions。在组件中直接调用commit
+            // this.$store.commit('changeCity',city); 
+            this.changeCity(city); // 由于在使用了 ...mapMutations(['changeCity'])
+            this.$router.push('/');
+        },
+        ...mapMutations(['changeCity'])
     },
     mounted() {
         this.scroll = new Bscroll(this.$refs.wrapper);

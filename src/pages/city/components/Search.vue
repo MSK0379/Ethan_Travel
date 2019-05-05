@@ -11,7 +11,9 @@
             v-show="keyword">
             <ul>
                 <li class="serach-item border-bottom" 
-                    v-for="item of list" :key="item.id">
+                    v-for="item of list" :key="item.id"
+                    @click="handleCityClick(item.name)"
+                >
                     {{ item.name }}
                 </li>
                 <li class="serach-item border-bottom"
@@ -25,6 +27,8 @@
 
 <script>
 import Bscroll from 'better-scroll' 
+import { mapMutations} from 'vuex'
+
 export default {
     name:'CitySearch',
     props:{
@@ -36,6 +40,24 @@ export default {
             list: [],
             timer: null
         }
+    },
+    methods:{
+        // handleCityClick(city){
+        //     // 调用action:派发changeCity方法传递参数为city
+        //     // this.$store.dispatch('changeCity',city);
+        //     // 由于为简单的同步操作不需要actions。在组件中直接调用commit
+        //     this.$store.commit('changeCity',city); 
+        //     this.$router.push('/');
+        // }
+        handleCityClick(city){
+            // 调用action:派发changeCity方法传递参数为city
+            // this.$store.dispatch('changeCity',city);
+            // 由于为简单的同步操作不需要actions。在组件中直接调用commit
+            // this.$store.commit('changeCity',city); 
+            this.changeCity(city); // 由于在使用了 ...mapMutations(['changeCity'])
+            this.$router.push('/');
+        },
+        ...mapMutations(['changeCity'])
     },
     computed:{
         hasNoData(){

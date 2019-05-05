@@ -14,6 +14,8 @@ import 'styles/iconfont.css'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 // 引入 swiper要求的css
 import 'swiper/dist/css/swiper.css'
+// 引入vuex
+import store from './store/index'
 
 fastClick.attach(document.body)
 //USE swiper//在全局中配置
@@ -25,6 +27,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store, // 引入store
   components: { App }, // 键和值一样可以只写一个
   template: '<App/>'
 })
