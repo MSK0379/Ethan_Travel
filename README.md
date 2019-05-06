@@ -25,6 +25,8 @@ fastClick.attach(document.body)
  > npm install stylue-loader --save
  > 在vue文件中声明<style lang="stylus">
 ### 2. 使用icon-font
+> 添加新的图标后，要重新引入下列各文件，将原有文件替换掉
+> （iconfont.css不用替换:但要替换 url('data:application/x-font-woff2）
 1. icon-font网站下载（选中有用的添加到购物车，下载到本地）
 2. 导入本地项目（在本地@/assets/styles/iconfont下放入：[.eot , .svg , .ttf , .woff]四个文件，在本地@/assets/styles放入：[iconfont.css]）
 3. 修改iconfont.css引入的路径
